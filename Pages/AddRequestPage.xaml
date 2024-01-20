@@ -1,0 +1,53 @@
+﻿<Page x:Class="ServiceRequestApp.Pages.AddRequestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ServiceRequestApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Новая заявка" FontFamily="Comic Sans MS">
+
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="90"/>
+            <RowDefinition  Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="170"/>
+            <ColumnDefinition Width="170"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Name="userNameText" Text="Отправитель:" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                   HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10 0 0 0" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Text="Укажите тему заявки:" Width="200" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Text="Укажите важность:" Width="200" Grid.Column="0" Grid.Row="2"  VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Text="Дата создания:" Width="200" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Text="Добавьте описание:" Width="200" Grid.Column="0" Grid.Row="3" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Style="{StaticResource TextblockStyle}"/>
+        <TextBlock Text="Решить до:" Width="150" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center"
+                   HorizontalAlignment="Center" Style="{StaticResource TextblockStyle}"/>
+        <ComboBox Name="temaText" Width="170" HorizontalAlignment="Center" Grid.Column="1" 
+                  Grid.Row="1" VerticalAlignment="Center"/>
+        <ComboBox Name="importanceText" Width="170" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center"/>
+        <TextBox Name="dateText" Width="130" HorizontalAlignment="Center" Grid.Column="3" 
+                 Grid.Row="1" Style="{StaticResource TextBoxStyle}" VerticalAlignment="Center" IsReadOnly="True"/>
+        <DatePicker Name="dateFinish" Width="150" HorizontalAlignment="Center" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center"></DatePicker>
+        <TextBox Name="discripText" Width="340" Height="90" HorizontalAlignment="Left" Grid.Column="1" Grid.Row="3"  
+                  Style="{StaticResource DiscripStyle}" Grid.ColumnSpan="2" Grid.RowSpan="2" TextWrapping="Wrap"/>
+        <Button Name="btnAddReq" Content="Создать" Grid.Column="0" Grid.Row="5"
+                HorizontalAlignment="Left" Margin="40 0 0 0" Style="{StaticResource ButStyleReq}" Grid.ColumnSpan="2"
+                Click="btnAddReq_Click"/>
+        <Button Name="btnClean" Content="Очистить" Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="2"
+                HorizontalAlignment="Right" Margin="0 0 40 0" Style="{StaticResource ButStyleReq}" 
+                Click="btnClean_Click"/>
+    </Grid>
+</Page>

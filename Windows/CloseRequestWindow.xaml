@@ -1,0 +1,28 @@
+﻿<Window x:Class="ServiceRequestApp.Windows.CloseRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ServiceRequestApp.Windows"
+        mc:Ignorable="d"
+        Title="Закрытие заявки" Height="250" Width="500" FontFamily="Comic Sans MS" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Name="idText" Grid.Row="0" Grid.Column="0" Text="Ответ на заявку № " Style="{StaticResource TextblockStyle}"
+                   Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBox Name="responseText" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource DiscripStyle}"/>
+        <Button Name="btnSave" Content="Сохранить" Grid.Row="2" Grid.Column="0" Style="{StaticResource ButStyleReq}"
+                VerticalAlignment="Center" Click="btnSave_Click"/>
+        <Button Name="btnCancel" Content="Отмена" Grid.Row="2" Grid.Column="1" Style="{StaticResource ButStyleReq}"
+                VerticalAlignment="Center" Click="btnCancel_Click"/>
+    </Grid>
+</Window>
